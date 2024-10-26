@@ -15,7 +15,7 @@ public:
     // write three more constructors
     Goat(string n) {name = n; age = 0; color = "";}  // constructor with just name as an argument
     Goat(string n, int a) {name = n; age = a; color = ""; } // constuctor with name and age as an argument
-    
+    Goat(string n, int a, string c) {name = n; age = a; color = c;} // full parameter constructor
 
     // setters and getters
     void set_name(string n)         { name = n; };
