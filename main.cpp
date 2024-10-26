@@ -47,7 +47,27 @@ int main_menu()
         cout<<"[4] Quit"<<endl; 
         cin>>choice; 
 
-    } 
+        switch(choice) 
+            {
+                case 1:
+                    cout<<"A goat is added"<<endl; 
+                    return 1;
+                    break;
+                case 2: 
+                    cout<<"A goat is deleted"<<endl; 
+                    return 1;
+
+                case 3: 
+                    cout<<"This is the list of goats"<<endl; 
+                    return 3;
+                    break; 
+                case 4: 
+                    cout<<"Exiting..."<<endl; 
+                    return 0;
+                    break;  
+
+
+    } while(choice =! 4)
 
 
 }
