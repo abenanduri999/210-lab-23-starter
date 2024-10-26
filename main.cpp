@@ -35,3 +35,10 @@ int main() {
     return 0;
 }
 
+int main_menu()
+{
+    cout<<"*** GOAT MANAGER 3001 ***"<<endl; 
+    
+
+
+}
