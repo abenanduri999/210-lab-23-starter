@@ -47,6 +47,8 @@ int main() {
 
     display_trip(trip);    
     add_goat(trip, names, colors); 
+    cout<<endl<<endl; 
+    display_trip(trip);
 
 
     return 0;
@@ -100,4 +102,12 @@ void display_trip(list<Goat> trip)
     }
 }
 
-void add_goat() 
+void add_goat(list<Goat> &trip, string n[], string c[])
+{
+    Goat temp; 
+    temp.set_name(n[rand() % SZ_NAMES]); 
+    temp.set_age(rand() % MAX_AGE); 
+    temp.set_color(c[rand() % SZ_COLORS]);
+    trip.push_back(temp); 
+
+} 
