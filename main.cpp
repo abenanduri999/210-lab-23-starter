@@ -35,12 +35,14 @@ int main() {
 
     for(int i = 0; i < tripSize; i++)
     {
-        
+        Goat temp; 
         int randn = 1 + rand() % tripSize;
-        int randc = 1 + rand() % tripSize; 
-        
-
-
+        int randa = 1 + rand() % 20; 
+        int randc = 1 + rand() % tripSize;
+        temp.set_name(names[randn]);
+        temp.set_age(randa);
+        temp.set_color(colors[randc]);
+        trip.push_back(temp); 
     }
 
     
