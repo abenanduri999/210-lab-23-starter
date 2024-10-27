@@ -49,6 +49,9 @@ int main() {
     add_goat(trip, names, colors); 
     cout<<endl<<endl; 
     display_trip(trip);
+    delete_goat(trip);
+    cout<<endl<<endl; 
+    display_trip(trip);
 
 
     return 0;
@@ -111,3 +114,14 @@ void add_goat(list<Goat> &trip, string n[], string c[])
     trip.push_back(temp); 
 
 } 
+
+void delete_goat(list<Goat> &trip)
+{
+    cout<<"select a goat to delete"<<endl;
+    
+}
+
+int select_goat(list<Goat> trip) 
+{
+    
+}
