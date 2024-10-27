@@ -45,22 +45,23 @@ int main() {
         trip.push_back(temp); 
     }
 
-   
     int choice = main_menu();
-    if(choice = 1)
-    {
-        add_goat(trip, names, colors);
-    }
-    else if(choice = 2)
-    {
-        delete_goat(trip);
-    }
-    else if(choice = 3)
-    {
-        display_trip(trip); 
-    }
-    else 
-        return 0;
+       
+        if(choice = 1)
+        {
+            add_goat(trip, names, colors);
+        }
+        if(choice = 2)
+        {
+            delete_goat(trip);
+        }
+       if(choice = 3)
+        {
+            display_trip(trip); 
+        }
+    
+   
+   
 
     return 0;
 }
@@ -69,37 +70,34 @@ int main_menu()
 {
     int choice; 
 
-    do 
-    {
+  
         cout<<"*** GOAT MANAGER 3001 ***"<<endl; 
         cout<<"[1] Add a goat"<<endl; 
         cout<<"[2] Delete a goat"<<endl;
         cout<<"[3] List goats"<<endl; 
         cout<<"[4] Quit"<<endl; 
+        cout<<"Choice --> ";
         cin>>choice; 
-
-        switch(choice) 
+        return choice; 
+       /* switch(choice) 
             {
                 case 1:
                     cout<<"A goat is added"<<endl; 
-                    return 1;
-                    break;
+                    return choice;
+                    
                 case 2: 
                     cout<<"A goat is deleted"<<endl; 
-                    return 2;
+                    return choice;
 
                 case 3: 
                     cout<<"This is the list of goats"<<endl; 
-                    return 3;
-                    break; 
+                    return choice;
+                     
                 case 4: 
                     cout<<"Exiting..."<<endl; 
-                    return 0;
-                    break;  
-            } 
-    } while(choice =! 4); 
-
-    return 0;
+                    return choice;
+                      
+            } */
 
 }
 
