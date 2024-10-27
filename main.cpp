@@ -45,21 +45,30 @@ int main() {
         trip.push_back(temp); 
     }
 
-    int choice = main_menu();
+    int choice;
        
+       do{
+        int choice = main_menu();
+
         if(choice = 1)
         {
             add_goat(trip, names, colors);
+            break;
+            
         }
         if(choice = 2)
         {
             delete_goat(trip);
+            break;
+              
         }
        if(choice = 3)
         {
-            display_trip(trip); 
+            display_trip(trip);    
+            break;
         }
-    
+        
+       } while(choice != 4);
    
    
 
@@ -78,8 +87,8 @@ int main_menu()
         cout<<"[4] Quit"<<endl; 
         cout<<"Choice --> ";
         cin>>choice; 
-        return choice; 
-       /* switch(choice) 
+        //return choice; 
+       switch(choice) 
             {
                 case 1:
                     cout<<"A goat is added"<<endl; 
@@ -97,7 +106,7 @@ int main_menu()
                     cout<<"Exiting..."<<endl; 
                     return choice;
                       
-            } */
+            } 
 
 }
 
@@ -106,7 +115,7 @@ void display_trip(list<Goat> trip)
     int i = 1;
     for(auto it = trip.begin(); it != trip.end(); ++it)
     {
-        cout<<"["<<i<<"] "<<it->get_name()<<" "<<"( "<<it->get_age()<<", "
+        cout<<"["<<i<<"] "<<it->get_name()<<" "<<"("<<it->get_age()<<", "
         <<it->get_color()<<")"<<endl;
         i++;
     }
@@ -124,19 +133,10 @@ void add_goat(list<Goat> &trip, string n[], string c[])
 
 void delete_goat(list<Goat> &trip)
 {
-    trip.pop_back();
-   /* int del = select_goat(trip); 
-    int count = 0;
-    for(auto it = trip.begin(); it != trip.end(); ++it)
-    {
-        ++count;
-        if(count = del)
-        {
-            trip.erase(it); 
-        }
+   // int del = select_goat(trip); 
+    
 
-    }*/
-
+    
 }
 
 int select_goat(list<Goat> trip) 
