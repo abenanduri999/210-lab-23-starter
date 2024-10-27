@@ -50,24 +50,26 @@ int main() {
        do{
         int choice = main_menu();
 
-        if(choice = 1)
+        switch(choice) 
         {
+        case 1:
+        
             add_goat(trip, names, colors);
             break;
-            
-        }
-        if(choice = 2)
-        {
+        
+        case 2:
+        
             delete_goat(trip);
             break;
               
-        }
-       if(choice = 3)
-        {
+        case 3:
             display_trip(trip);    
             break;
-        }
         
+        case 4: 
+            break;
+        
+        }
        } while(choice != 4);
    
    
