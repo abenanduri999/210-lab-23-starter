@@ -67,7 +67,7 @@ int main() {
             break;
         
         case 4: 
-            break;
+            return 0;
         
         }
        } while(choice != 4);
