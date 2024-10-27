@@ -29,7 +29,11 @@ int main() {
     while (fin1 >> colors[i++]);
     fin1.close();
 
+    list<Goat> trip; 
 
+    int tripSize = 1 + rand() % sizeof(names); 
+
+    
 
 
     return 0;
@@ -39,7 +43,8 @@ int main_menu()
 {
     int choice; 
 
-    do {
+    do 
+    {
         cout<<"*** GOAT MANAGER 3001 ***"<<endl; 
         cout<<"[1] Add a goat"<<endl; 
         cout<<"[2] Delete a goat"<<endl;
@@ -55,7 +60,7 @@ int main_menu()
                     break;
                 case 2: 
                     cout<<"A goat is deleted"<<endl; 
-                    return 1;
+                    return 2;
 
                 case 3: 
                     cout<<"This is the list of goats"<<endl; 
@@ -65,9 +70,8 @@ int main_menu()
                     cout<<"Exiting..."<<endl; 
                     return 0;
                     break;  
-
-
-    } while(choice =! 4)
+            } 
+    } while(choice =! 4); 
 
 
 }
