@@ -87,3 +87,10 @@ int main_menu()
 
 
 }
+
+void display_trip(list<Goat> trip)
+{
+    for(auto it = trip.begin(); it!)
+    {}
+}
+
