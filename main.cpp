@@ -91,7 +91,6 @@ int main_menu()
             } 
     } while(choice =! 4); 
 
-
 }
 
 void display_trip(list<Goat> trip)
@@ -117,11 +116,21 @@ void add_goat(list<Goat> &trip, string n[], string c[])
 
 void delete_goat(list<Goat> &trip)
 {
-    cout<<"select a goat to delete"<<endl;
+    int del = select_goat(trip); 
+
+    auto it = find(trip.begin(), trip.end(), del - 1);
+    trip.erase(it); 
+
     
 }
 
 int select_goat(list<Goat> trip) 
 {
-    
+    int choice; 
+    cout<<"Select a goat to delete:"<<endl;
+    display_trip(trip);
+    cin>>choice; 
+
+    return choice; 
+
 }
