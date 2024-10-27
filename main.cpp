@@ -45,10 +45,8 @@ int main() {
         trip.push_back(temp); 
     }
 
-    display_trip(trip);    
-    add_goat(trip, names, colors); 
-    cout<<endl<<endl; 
-    display_trip(trip);
+   
+
     delete_goat(trip);
     cout<<endl<<endl; 
     display_trip(trip);
@@ -91,6 +89,8 @@ int main_menu()
             } 
     } while(choice =! 4); 
 
+    return 0;
+
 }
 
 void display_trip(list<Goat> trip)
@@ -117,11 +117,16 @@ void add_goat(list<Goat> &trip, string n[], string c[])
 void delete_goat(list<Goat> &trip)
 {
     int del = select_goat(trip); 
+    int count = 0; 
+    for(auto it = trip.begin(); it != trip.end(); ++it)
+    {
+        count++;
+        if(count = del -1)
+        {
+            trip.erase(it); 
+        }
+    }
 
-    auto it = find(trip.begin(), trip.end(), del - 1);
-    trip.erase(it); 
-
-    
 }
 
 int select_goat(list<Goat> trip) 
