@@ -33,6 +33,16 @@ int main() {
 
     int tripSize = 1 + rand() % sizeof(names); 
 
+    for(int i = 0; i < tripSize; i++)
+    {
+        
+        int randn = 1 + rand() % tripSize;
+        int randc = 1 + rand() % tripSize; 
+        
+
+
+    }
+
     
 
 
