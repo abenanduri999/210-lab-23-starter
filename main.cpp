@@ -97,7 +97,7 @@ int main_menu()
                     return choice;
                     
                 case 2: 
-                    cout<<"A goat is deleted"<<endl; 
+                    //cout<<"A goat is deleted"<<endl; 
                     return choice;
 
                 case 3: 
@@ -135,8 +135,10 @@ void add_goat(list<Goat> &trip, string n[], string c[])
 
 void delete_goat(list<Goat> &trip)
 {
-   // int del = select_goat(trip); 
-    
+   int del = select_goat(trip); 
+   auto it = trip.begin();
+   advance(it, del -1);   //looked up the advance function on geeksforgeeks.org on their c++ STL list page
+   trip.erase(it); 
 
     
 }
