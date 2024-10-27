@@ -31,14 +31,14 @@ int main() {
 
     list<Goat> trip; 
 
-    //int tripSize = 1 + rand() % sizeof(colors); 
+    //int tripSize = 1 + rand() % SZ_COLORS; 
 
     for(int i = 0; i < 8; i++)
     {
         Goat temp; 
-        int randn = rand() % sizeof(names);
+        int randn = rand() % SZ_NAMES;
         int randa = rand() % MAX_AGE; 
-        int randc = rand() % sizeof(colors);
+        int randc = rand() % SZ_COLORS;
         temp.set_name(names[randn]);
         temp.set_age(randa);
         temp.set_color(colors[randc]);
@@ -46,6 +46,7 @@ int main() {
     }
 
     display_trip(trip);    
+    add_goat(trip, names, colors); 
 
 
     return 0;
@@ -99,3 +100,4 @@ void display_trip(list<Goat> trip)
     }
 }
 
+void add_goat() 
